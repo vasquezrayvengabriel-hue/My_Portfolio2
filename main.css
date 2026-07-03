@@ -1,25 +1,27 @@
-/* ==========================
-   Google Font
+    /* ==========================
+   BODY WITH BACKGROUND IMAGE
 ========================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    font-family:'Poppins',sans-serif;
-}
 
 body{
-    background:#eef6ef;
-    color:#222;
+    margin:0;
+    padding:0;
     display:flex;
+    font-family:'Poppins',sans-serif;
+
+    /* Background image */
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    color:#ffffff;
 }
 
-/* ==========================
-   Sidebar
-========================== */
+/* Sidebar */
 
 .sidebar{
     position:fixed;
@@ -27,10 +29,12 @@ body{
     top:0;
     width:270px;
     height:100vh;
-    background:linear-gradient(180deg,#1b5e20,#2e7d32,#43a047);
-    color:#fff;
     padding:40px 25px;
-    box-shadow:4px 0 15px rgba(0,0,0,.2);
+
+    background:rgba(18,94,32,0.92);
+    backdrop-filter:blur(10px);
+
+    color:#fff;
 }
 
 .sidebar h2{
@@ -39,8 +43,8 @@ body{
 }
 
 .sidebar p{
-    margin-bottom:35px;
-    color:#dcedc8;
+    color:#d8ffd8;
+    margin-bottom:30px;
 }
 
 .sidebar nav{
@@ -51,63 +55,44 @@ body{
 .sidebar nav a{
     color:#fff;
     text-decoration:none;
-    margin:8px 0;
     padding:12px;
+    margin:6px 0;
     border-radius:8px;
     transition:.3s;
-    font-weight:500;
 }
 
 .sidebar nav a:hover{
-    background:#ffffff22;
-    transform:translateX(8px);
+    background:#4caf50;
 }
 
-/* ==========================
-   Main
-========================== */
+/* Main */
 
 main{
     margin-left:270px;
     width:calc(100% - 270px);
 }
 
+/* Sections */
+
 section{
-    padding:80px 60px;
+    margin:30px;
+    padding:70px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-/* ==========================
-   Hero
-========================== */
+/* Hero */
 
 .hero{
-    min-height:100vh;
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:60px;
-}
-
-.hero h1{
-    font-size:48px;
-    color:#1b5e20;
-}
-
-.hero h3{
-    margin:15px 0;
-    color:#388e3c;
-}
-
-.hero blockquote{
-    font-size:22px;
-    font-style:italic;
-    color:#2e7d32;
-    margin:25px 0;
-}
-
-.hero p{
-    font-size:18px;
-    line-height:1.8;
+    min-height:90vh;
 }
 
 .hero img{
@@ -115,59 +100,45 @@ section{
     height:330px;
     object-fit:cover;
     border-radius:50%;
-    border:8px solid #43a047;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    border:8px solid #66bb6a;
+    box-shadow:0 0 30px rgba(102,187,106,.6);
 }
 
-/* ==========================
-   Headings
-========================== */
+.hero h1{
+    color:#9cff8f;
+    font-size:48px;
+}
+
+.hero h3{
+    color:#fff;
+}
+
+.hero blockquote{
+    color:#d8ffd8;
+    font-size:22px;
+    margin:20px 0;
+}
+
+/* Headings */
 
 h2{
+    color:#9cff8f;
+    margin-bottom:25px;
     font-size:34px;
-    color:#1b5e20;
-    margin-bottom:30px;
 }
 
-/* ==========================
-   Paragraphs
-========================== */
-
-p{
-    line-height:1.9;
-    font-size:17px;
-    margin-bottom:18px;
-}
-
-/* ==========================
-   Lists
-========================== */
-
-ul{
-    padding-left:25px;
-}
-
-ul li{
-    margin-bottom:15px;
-    font-size:17px;
-}
-
-/* ==========================
-   Cards
-========================== */
+/* Cards */
 
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
-    margin-top:30px;
 }
 
 .card{
-    background:#fff;
+    background:rgba(255,255,255,.15);
+    padding:20px;
     border-radius:15px;
-    padding:25px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
     transition:.3s;
 }
 
@@ -177,28 +148,20 @@ ul li{
 
 .card img{
     width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:10px;
-    margin-bottom:15px;
+    border-radius:12px;
 }
 
-.card h3{
-    color:#2e7d32;
-    margin-bottom:12px;
-}
-
-/* ==========================
-   Skills
-========================== */
+/* Technical Skills Image */
 
 .wide{
     width:100%;
     max-height:350px;
     object-fit:cover;
     border-radius:15px;
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
+
+/* Skill Boxes */
 
 .grid{
     display:grid;
@@ -207,44 +170,22 @@ ul li{
 }
 
 .grid span{
-    background:#43a047;
-    color:#fff;
-    padding:15px;
-    border-radius:10px;
-    text-align:center;
-    font-weight:600;
-    transition:.3s;
-}
-
-.grid span:hover{
     background:#2e7d32;
-    transform:scale(1.05);
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    font-weight:bold;
 }
 
-/* ==========================
-   Contact
-========================== */
-
-#contact p{
-    margin:12px 0;
-    font-size:18px;
-}
-
-/* ==========================
-   Footer
-========================== */
+/* Footer */
 
 footer{
-    background:#1b5e20;
-    color:#fff;
+    background:rgba(18,94,32,.95);
     text-align:center;
-    padding:30px;
-    font-size:15px;
+    padding:25px;
 }
 
-/* ==========================
-   Responsive
-========================== */
+/* Responsive */
 
 @media(max-width:900px){
 
@@ -269,16 +210,14 @@ main{
 }
 
 .hero img{
-    width:260px;
-    height:260px;
+    width:250px;
+    height:250px;
 }
 
 section{
-    padding:60px 25px;
+    margin:15px;
+    padding:40px 20px;
 }
 
-.hero h1{
-    font-size:38px;
-}
-
-  }
+   }
+   
