@@ -7,71 +7,79 @@
     scroll-behavior: smooth;
 }
 
-/* Background Configuration: High Visibility Setup for background.jpg */
+/* Base Configuration & Fixed Background implementation */
 body {
-    background: linear-gradient(135deg, rgba(6, 15, 9, 0.78), rgba(10, 20, 14, 0.82)), url('background.jpg');
+    background: linear-gradient(135deg, rgba(8, 22, 13, 0.94), rgba(15, 30, 20, 0.97)), url('background.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     background-attachment: fixed;
     color: #e2f1ea;
     min-height: 100vh;
     display: flex;
+    flex-direction: column; /* Changed to column to stack Top Nav and Main Content natively */
 }
 
-/* Strictly Vertical Sidebar Layout (Fixed Left Panel) */
-.sidebar {
+/* New Sticky Top Navigation Bar Layout */
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 260px;
-    height: 100vh;
-    background: rgba(10, 24, 15, 0.88);
+    width: 100%;
+    background: rgba(10, 24, 15, 0.92);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-right: 1px solid rgba(255, 255, 255, 0.06);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 20px;
-    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 1000;
+    padding: 15px 40px;
 }
 
-.sidebar-brand {
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns brand and navigation options completely to the left */
+    gap: 50px;
+}
+
+.navbar-brand {
     font-size: 1.25rem;
     font-weight: 800;
     color: #fff;
     letter-spacing: 2px;
-    padding-left: 10px;
+    white-space: nowrap;
 }
 
 .brand-logo {
     color: #4ade80;
 }
 
-/* Strictly vertical layout */
-.sidebar-menu {
+/* Horizontal top menu layout */
+.navbar-menu {
     list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap; /* Gracefully handles lower browser resolution wrapping safely */
 }
 
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
     color: #a3b8ad;
     text-decoration: none;
-    padding: 14px 18px;
-    border-radius: 10px;
-    font-size: 0.95rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
 }
 
 .nav-item i {
-    font-size: 1.1rem;
-    width: 20px;
+    font-size: 1rem;
     transition: transform 0.3s ease;
 }
 
@@ -81,46 +89,42 @@ body {
 }
 
 .nav-item:hover i {
-    transform: translateX(4px);
+    transform: translateY(-2px); /* Swapped arrow hover from sideways to upward bounce */
 }
 
 .nav-item.active {
     color: #06140c;
     background: #4ade80;
     font-weight: 600;
-    box-shadow: 0 4px 20px rgba(74, 222, 128, 0.25);
+    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
 }
 
-.sidebar-footer {
-    font-size: 0.75rem;
-    color: #688073;
-    padding-left: 10px;
-}
-
-/* Content Area Offsets */
+/* Content Area Config - Shifted margin offsets to compensate for Top Bar height */
 .main-content {
-    margin-left: 260px;
-    flex: 1;
-    max-width: 1100px;
-    padding: 40px 5% 60px 5%;
+    margin-top: 80px; /* Pads content downward below sticky menu frame */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 4% 60px 4%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
 }
 
 .content-section {
-    scroll-margin-top: 40px;
+    scroll-margin-top: 110px; /* Fine-tuned alignment target during anchor click scroll drops */
 }
 
-/* Semi-Transparent Glassmorphic Content Panels */
+/* Glassmorphic Core Framework Components */
 .glass-card {
-    background: rgba(15, 32, 22, 0.35); 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }
 
 .panel-title {
@@ -134,7 +138,7 @@ body {
     padding-bottom: 12px;
 }
 
-/* Profile Section Layout Rules */
+/* Profile Interface Element Layouts */
 .hero-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -186,7 +190,7 @@ body {
 }
 
 .motto-box {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.15);
     border-left: 3px solid #4ade80;
     padding: 18px 22px;
     border-radius: 0 12px 12px 0;
@@ -225,20 +229,19 @@ body {
     justify-content: center;
 }
 
-.avatar-hexagon {
-    width: 240px;
-    height: 240px;
-    border-radius: 30px;
-    transform: rotate(45deg);
+.avatar-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
     overflow: hidden;
     border: 4px solid rgba(74, 222, 128, 0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 
-.avatar-hexagon img {
-    width: 140%;
-    height: 140%;
+.avatar-circle img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transform: rotate(-45deg) translate(-15%, -15%);
 }
 
 .bio-narrative p {
@@ -252,7 +255,7 @@ body {
     margin-bottom: 0;
 }
 
-/* Experience Stream */
+/* Timeline Components */
 .timeline-stream {
     display: flex;
     flex-direction: column;
@@ -292,23 +295,29 @@ body {
     color: #a3b8ad;
 }
 
-/* Skills Competency Blocks */
+/* Technical Matrix Layout Elements */
 .matrix-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
 }
 
 .matrix-cell {
-    background: rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 14px;
     padding: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.matrix-cell:hover {
+    transform: translateY(-4px);
+    border-color: rgba(74, 222, 128, 0.15);
 }
 
 .cell-media {
     width: 100%;
-    height: 110px;
+    height: 120px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -316,6 +325,7 @@ body {
 
 .matrix-cell h4 {
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .matrix-cell ul {
@@ -331,7 +341,7 @@ body {
     color: #4ade80;
 }
 
-/* Education Milestone Decks */
+/* Milestone Blocks */
 .milestone-deck {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -339,8 +349,8 @@ body {
 }
 
 .milestone-unit {
-    background: rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 14px;
     overflow: hidden;
 }
@@ -374,7 +384,7 @@ body {
     color: #a3b8ad;
 }
 
-/* Achievements Row Layouts */
+/* Accolade Architecture Layouts */
 .accolade-row {
     display: flex;
     flex-direction: column;
@@ -385,10 +395,10 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.01);
     padding: 20px;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .accolade-badge {
@@ -415,7 +425,7 @@ body {
     line-height: 1.5;
 }
 
-/* Contact Gateways Elements */
+/* Secure Gateway Communications Framework */
 .gateway-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
@@ -432,10 +442,10 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.15);
     padding: 18px 22px;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
@@ -443,7 +453,7 @@ body {
 
 a.rolodex-node:hover {
     border-color: rgba(74, 222, 128, 0.3);
-    background: rgba(74, 222, 128, 0.04);
+    background: rgba(74, 222, 128, 0.02);
     transform: translateY(-2px);
 }
 
@@ -480,7 +490,7 @@ a.rolodex-node:hover {
     color: rgba(255, 255, 255, 0.2);
 }
 
-/* Forms Engine Input Formatting */
+/* Inputs and Forms Control Hooks */
 .gateway-form {
     display: flex;
     flex-direction: column;
@@ -494,7 +504,7 @@ a.rolodex-node:hover {
 
 .control-input {
     width: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;
     padding: 18px 16px 10px 16px;
@@ -551,32 +561,37 @@ a.rolodex-node:hover {
     color: #06140c;
 }
 
-.system-footer {
+/* Master Fixed Year Footer View */
+.master-footer {
     text-align: center;
-    color: #556c5f;
-    font-size: 0.8rem;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    color: #688073;
+    font-size: 0.85rem;
+    padding: 30px 20px;
+    margin-top: auto; /* Ensures footer sticks seamlessly to absolute document bottom floor */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(6, 17, 10, 0.4);
+    width: 100%;
 }
 
-/* Responsive Structural Breakpoints */
+/* Responsive Adaptive Fluid Breakpoints */
 @media (max-width: 992px) {
-    body {
-        flex-direction: column;
+    .navbar {
+        padding: 15px 20px;
     }
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 20px;
-    }
-    .sidebar-menu {
+    .nav-container {
+        gap: 20px;
         flex-direction: column;
-        width: 100%;
+        align-items: flex-start;
+    }
+    .navbar-menu {
+        gap: 4px;
+    }
+    .nav-item {
+        padding: 8px 10px;
+        font-size: 0.85rem;
     }
     .main-content {
-        margin-left: 0;
-        width: 100%;
+        margin-top: 130px; /* Accounts for wrapped vertical stacking of top nav items on mobile */
         padding: 20px;
     }
     .hero-grid, .gateway-wrapper {
@@ -585,6 +600,9 @@ a.rolodex-node:hover {
     .hero-grid {
         display: flex;
         flex-direction: column-reverse;
+    }
+    .hero-details h1 {
+        font-size: 2.5rem;
     }
     }
     
