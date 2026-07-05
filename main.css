@@ -1,4 +1,4 @@
-/* Core Structural Blueprint Reset */
+/* Core Structural Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,32 +7,32 @@
     scroll-behavior: smooth;
 }
 
-/* Base Top-Anchored Green Organic Gradient Overlays */
+/* Background Configuration: High Visibility Setup for background.jpg */
 body {
-    background: linear-gradient(135deg, rgba(8, 22, 13, 0.94), rgba(15, 30, 20, 0.97)), url('background.jpg');
+    background: linear-gradient(135deg, rgba(6, 15, 9, 0.78), rgba(10, 20, 14, 0.82)), url('background.jpg');
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     background-attachment: fixed;
     color: #e2f1ea;
     min-height: 100vh;
     display: flex;
 }
 
-/* Sidebar Dashboard Navigation Layer (Fixed Left) */
+/* Strictly Vertical Sidebar Layout (Fixed Left Panel) */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 260px;
     height: 100vh;
-    background: rgba(10, 24, 15, 0.85);
+    background: rgba(10, 24, 15, 0.88);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-right: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px 20px;
+    padding: 40px 20px;
     z-index: 100;
 }
 
@@ -48,12 +48,12 @@ body {
     color: #4ade80;
 }
 
+/* Strictly vertical layout */
 .sidebar-menu {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: -60px; /* Shifts centering optimally */
+    gap: 12px;
 }
 
 .nav-item {
@@ -81,7 +81,7 @@ body {
 }
 
 .nav-item:hover i {
-    transform: translateX(3px);
+    transform: translateX(4px);
 }
 
 .nav-item.active {
@@ -97,9 +97,9 @@ body {
     padding-left: 10px;
 }
 
-/* Master Grid Space Management */
+/* Content Area Offsets */
 .main-content {
-    margin-left: 260px; /* Accommodates fixed sidebar width */
+    margin-left: 260px;
     flex: 1;
     max-width: 1100px;
     padding: 40px 5% 60px 5%;
@@ -112,19 +112,15 @@ body {
     scroll-margin-top: 40px;
 }
 
-/* Upgraded Universal Glassmorphism Panels */
+/* Semi-Transparent Glassmorphic Content Panels */
 .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(15, 32, 22, 0.35); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-}
-
-.full-height {
-    height: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
 }
 
 .panel-title {
@@ -138,7 +134,7 @@ body {
     padding-bottom: 12px;
 }
 
-/* Modern Dashboard Hero Section Grid */
+/* Profile Section Layout Rules */
 .hero-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -157,7 +153,6 @@ body {
     font-weight: 600;
     padding: 6px 14px;
     border-radius: 50px;
-    letter-spacing: 0.5px;
 }
 
 .status-tag.live {
@@ -190,27 +185,13 @@ body {
     margin-bottom: 30px;
 }
 
-.target-objective i {
-    color: #4ade80;
-    font-size: 1.1rem;
-}
-
-/* Motto Box Design Block */
 .motto-box {
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.25);
     border-left: 3px solid #4ade80;
     padding: 18px 22px;
     border-radius: 0 12px 12px 0;
     margin-bottom: 35px;
     position: relative;
-}
-
-.quote-icon {
-    position: absolute;
-    top: -10px;
-    left: 15px;
-    font-size: 1.5rem;
-    color: rgba(74, 222, 128, 0.1);
 }
 
 .motto-text {
@@ -239,20 +220,18 @@ body {
     box-shadow: 0 6px 20px rgba(74, 222, 128, 0.3);
 }
 
-/* Avatar Hexagon Display */
 .hero-display {
     display: flex;
     justify-content: center;
 }
 
 .avatar-hexagon {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
     border-radius: 30px;
     transform: rotate(45deg);
     overflow: hidden;
     border: 4px solid rgba(74, 222, 128, 0.3);
-    box-shadow: 0 0 30px rgba(74, 222, 128, 0.15);
 }
 
 .avatar-hexagon img {
@@ -260,13 +239,6 @@ body {
     height: 140%;
     object-fit: cover;
     transform: rotate(-45deg) translate(-15%, -15%);
-}
-
-/* Secondary Multi-Column Split Frameworks */
-.dual-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
 }
 
 .bio-narrative p {
@@ -280,7 +252,7 @@ body {
     margin-bottom: 0;
 }
 
-/* Timeline Components */
+/* Experience Stream */
 .timeline-stream {
     display: flex;
     flex-direction: column;
@@ -306,7 +278,6 @@ body {
 
 .timeline-block h4 {
     font-size: 1.05rem;
-    font-weight: 600;
 }
 
 .time-stamp {
@@ -318,11 +289,10 @@ body {
 
 .timeline-block p {
     font-size: 0.9rem;
-    line-height: 1.5;
     color: #a3b8ad;
 }
 
-/* Tech Matrix Layout Core */
+/* Skills Competency Blocks */
 .matrix-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -330,8 +300,8 @@ body {
 }
 
 .matrix-cell {
-    background: rgba(0, 0, 0, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 14px;
     padding: 20px;
 }
@@ -345,15 +315,12 @@ body {
 }
 
 .matrix-cell h4 {
-    font-size: 1.05rem;
-    color: #fff;
     margin-bottom: 10px;
 }
 
 .matrix-cell ul {
     list-style: none;
     font-size: 0.85rem;
-    color: #cbdcd3;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -362,10 +329,9 @@ body {
 .matrix-cell ul li::before {
     content: "▪ ";
     color: #4ade80;
-    margin-right: 4px;
 }
 
-/* Educational Tracks Layout */
+/* Education Milestone Decks */
 .milestone-deck {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -373,8 +339,8 @@ body {
 }
 
 .milestone-unit {
-    background: rgba(0, 0, 0, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 14px;
     overflow: hidden;
 }
@@ -396,7 +362,6 @@ body {
 .unit-year {
     font-size: 0.75rem;
     color: #4ade80;
-    font-weight: 600;
 }
 
 .unit-details h5 {
@@ -409,7 +374,7 @@ body {
     color: #a3b8ad;
 }
 
-/* Accolades Section Row Layout */
+/* Achievements Row Layouts */
 .accolade-row {
     display: flex;
     flex-direction: column;
@@ -420,10 +385,10 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
-    background: rgba(255, 255, 255, 0.01);
+    background: rgba(0, 0, 0, 0.15);
     padding: 20px;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .accolade-badge {
@@ -450,7 +415,7 @@ body {
     line-height: 1.5;
 }
 
-/* Premium Redesigned Communications Layer */
+/* Contact Gateways Elements */
 .gateway-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
@@ -467,10 +432,10 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.25);
     padding: 18px 22px;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
@@ -478,7 +443,7 @@ body {
 
 a.rolodex-node:hover {
     border-color: rgba(74, 222, 128, 0.3);
-    background: rgba(74, 222, 128, 0.02);
+    background: rgba(74, 222, 128, 0.04);
     transform: translateY(-2px);
 }
 
@@ -493,7 +458,6 @@ a.rolodex-node:hover {
     flex-shrink: 0;
 }
 
-/* Custom Portal Brand Colors */
 .node-icon.mail { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
 .node-icon.phone { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
 .node-icon.facebook { background: rgba(24, 119, 242, 0.1); color: #1877f2; }
@@ -503,28 +467,20 @@ a.rolodex-node:hover {
     font-size: 0.75rem;
     color: #a3b8ad;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
     margin-bottom: 2px;
 }
 
 .node-meta span {
     font-size: 0.95rem;
-    word-break: break-all;
 }
 
 .link-arrow {
     margin-left: auto;
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
 }
 
-a.rolodex-node:hover .link-arrow {
-    color: #4ade80;
-    transform: translateX(3px);
-}
-
-/* Modern Floating Label Contact Form System */
+/* Forms Engine Input Formatting */
 .gateway-form {
     display: flex;
     flex-direction: column;
@@ -538,7 +494,7 @@ a.rolodex-node:hover .link-arrow {
 
 .control-input {
     width: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;
     padding: 18px 16px 10px 16px;
@@ -550,7 +506,6 @@ a.rolodex-node:hover .link-arrow {
 
 .control-input:focus {
     border-color: #4ade80;
-    box-shadow: 0 0 15px rgba(74, 222, 128, 0.1);
 }
 
 .textarea-input {
@@ -558,7 +513,6 @@ a.rolodex-node:hover .link-arrow {
     resize: vertical;
 }
 
-/* Pure CSS Input Form Floating Engine */
 .floating-label {
     position: absolute;
     left: 16px;
@@ -584,7 +538,6 @@ a.rolodex-node:hover .link-arrow {
     padding: 16px;
     border-radius: 10px;
     font-weight: 600;
-    font-size: 0.95rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -596,11 +549,8 @@ a.rolodex-node:hover .link-arrow {
 .transmission-btn:hover {
     background: #4ade80;
     color: #06140c;
-    box-shadow: 0 5px 20px rgba(74, 222, 128, 0.2);
-    transform: translateY(-1px);
 }
 
-/* Footer & Global Responsive Layout Handling */
 .system-footer {
     text-align: center;
     color: #556c5f;
@@ -609,6 +559,7 @@ a.rolodex-node:hover .link-arrow {
     border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
+/* Responsive Structural Breakpoints */
 @media (max-width: 992px) {
     body {
         flex-direction: column;
@@ -620,17 +571,15 @@ a.rolodex-node:hover .link-arrow {
         padding: 20px;
     }
     .sidebar-menu {
-        margin-top: 20px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        width: 100%;
     }
     .main-content {
         margin-left: 0;
         width: 100%;
         padding: 20px;
     }
-    .hero-grid, .gateway-wrapper, .dual-grid {
+    .hero-grid, .gateway-wrapper {
         grid-template-columns: 1fr;
     }
     .hero-grid {
