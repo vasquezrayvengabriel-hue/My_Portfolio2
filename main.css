@@ -220,23 +220,20 @@ body {
     justify-content: center;
 }
 
-/* Standardized Circular Profile Frame Wrapper (Supports both old and new HTML structural markers) */
-.avatar-circle, .avatar-hexagon {
-    width: 190px;
-    height: 190px;
+/* Perfect Circular Profile Frame Wrapper */
+.avatar-circle {
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid rgba(74, 222, 128, 0.4);
-    box-shadow: 0 0 20px rgba(74, 222, 128, 0.15);
-    transform: none;
-    flex-shrink: 0;
+    border: 4px solid rgba(74, 222, 128, 0.4);
+    box-shadow: 0 0 25px rgba(74, 222, 128, 0.2);
 }
 
-.avatar-circle img, .avatar-hexagon img {
+.avatar-circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: none;
 }
 
 .bio-narrative p {
@@ -631,7 +628,7 @@ a.rolodex-node:hover {
 /* Responsive Structural Breakpoints */
 @media (max-width: 992px) {
     .navbar-menu {
-        display: none;
+        display: none; /* Can be turned into a hamburger menu system later */
     }
     .hero-grid, .gateway-wrapper, .footer-container {
         grid-template-columns: 1fr;
@@ -641,4 +638,4 @@ a.rolodex-node:hover {
         flex-direction: column-reverse;
     }
     }
-        
+    
