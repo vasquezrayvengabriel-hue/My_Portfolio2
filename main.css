@@ -555,13 +555,12 @@ a.rolodex-node:hover {
     padding: 30px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     background: rgba(17, 17, 17, 0.9);
-    width: 100%;
-    margin-top: auto;
     z-index: 10;
     position: relative;
     /* Aligns the content area neatly past the left sidebar frame */
     margin-left: 280px; 
     width: calc(100% - 280px);
+    margin-top: auto;
 }
 
 /* Responsive Adaptive Matrix Fluid Breakpoints */
@@ -610,5 +609,4 @@ a.rolodex-node:hover {
     .hero-details h1 {
         font-size: 2.5rem;
     }
-    }
-                                
+                                  }
