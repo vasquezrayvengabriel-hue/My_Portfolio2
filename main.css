@@ -16,24 +16,101 @@ body {
     color: #e2f1ea;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Structural sidebar alignment split */
 }
 
-/* Main Content Layout Block */
-.main-content {
-    margin-top: 40px; 
-    margin-left: auto;
-    margin-right: auto;
+/* Vertical Sidebar Layout (Directly Replicated from Uploaded Image Style) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: #111111; /* Sleek absolute deep black tone from your upload */
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    display: flex;
+    flex-direction: column;
+    padding: 45px 24px;
+    z-index: 100;
+}
+
+/* Header styled exactly like 'Portfolio' title in image */
+.sidebar-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 45px;
+    padding-left: 12px;
+}
+
+/* Sidebar lists orientation */
+.sidebar-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
     width: 100%;
+}
+
+/* Menu Text elements configured to match reference image */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #cccccc; /* Soft silver text styling */
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 16px; /* Pill layout rounding matching uploaded display card */
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.nav-item i {
+    font-size: 1.15rem;
+    width: 24px;
+    color: #bbbbbb;
+    transition: color 0.25s ease;
+}
+
+.nav-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Absolute replication of image's vivid Orange Selection Capsule */
+.nav-item.active {
+    color: #ffffff;
+    background: #ff7300; /* Vivid High-Contrast Orange hue parameter matched to sample */
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(255, 115, 0, 0.25);
+}
+
+.nav-item.active i {
+    color: #ffffff;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    font-size: 0.75rem;
+    color: #444444;
+    padding-left: 12px;
+}
+
+/* Content Area offset layout to grant clean room to the left side menu panel */
+.main-content {
+    margin-left: 280px; 
+    flex: 1;
     max-width: 1200px;
-    padding: 0 4% 60px 4%;
+    padding: 50px 5% 60px 5%;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
 .content-section {
-    scroll-margin-top: 40px; 
+    scroll-margin-top: 50px; 
 }
 
 /* Glassmorphic Core Framework Components */
@@ -58,10 +135,10 @@ body {
     padding-bottom: 12px;
 }
 
-/* Dual Column Layout Grid configuration inside Hero Card */
+/* Profile Layout Structure Grid */
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 40px;
     align-items: center;
 }
@@ -144,91 +221,18 @@ body {
     box-shadow: 0 6px 20px rgba(74, 222, 128, 0.3);
 }
 
-/* Context block placement mapping menu slider immediately to the LEFT of profile photo */
-.hero-display-aside {
+.hero-display {
     display: flex;
-    align-items: center;
-    justify-content: flex-end; 
-    gap: 20px;
-    width: 100%;
-    overflow: hidden;
+    justify-content: center;
 }
 
-/* Horizontal slide wrapper rules */
-.inline-nav-scroll {
-    flex: 1;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 10px 5px;
-    text-align: right; 
-    white-space: nowrap;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(74, 222, 128, 0.3) transparent;
-}
-
-/* Webkit Scrollbar layout properties */
-.inline-nav-scroll::-webkit-scrollbar {
-    height: 4px;
-}
-.inline-nav-scroll::-webkit-scrollbar-thumb {
-    background: rgba(74, 222, 128, 0.3);
-    border-radius: 10px;
-}
-
-/* Unordered list flex configurations */
-.inline-navbar-menu {
-    list-style: none;
-    display: inline-flex;
-    flex-direction: row;
-    gap: 8px;
-    justify-content: flex-end;
-}
-
-/* Inner Navigation Item Buttons */
-.nav-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #a3b8ad;
-    text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    white-space: nowrap;
-}
-
-.nav-item i {
-    font-size: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.nav-item:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.nav-item:hover i {
-    transform: translateY(-2px);
-}
-
-.nav-item.active {
-    color: #06140c;
-    background: #4ade80;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
-}
-
-/* Avatar Circle styling architecture */
 .avatar-circle {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid rgba(74, 222, 128, 0.3);
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    flex-shrink: 0; 
 }
 
 .avatar-circle img {
@@ -244,11 +248,7 @@ body {
     margin-bottom: 15px;
 }
 
-.bio-narrative p:last-child {
-    margin-bottom: 0;
-}
-
-/* Timeline Components */
+/* Timeline Layout Elements */
 .timeline-stream {
     display: flex;
     flex-direction: column;
@@ -288,7 +288,7 @@ body {
     color: #a3b8ad;
 }
 
-/* Technical Matrix Layout Elements */
+/* Technical Matrix Component Grids */
 .matrix-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -300,12 +300,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 14px;
     padding: 20px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.matrix-cell:hover {
-    transform: translateY(-4px);
-    border-color: rgba(74, 222, 128, 0.15);
 }
 
 .cell-media {
@@ -318,7 +312,6 @@ body {
 
 .matrix-cell h4 {
     margin-bottom: 10px;
-    color: #fff;
 }
 
 .matrix-cell ul {
@@ -334,7 +327,7 @@ body {
     color: #4ade80;
 }
 
-/* Milestone Blocks */
+/* Milestone Container Blocks */
 .milestone-deck {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -377,7 +370,7 @@ body {
     color: #a3b8ad;
 }
 
-/* Accolade Architecture Layouts */
+/* Accolade Rows layout properties */
 .accolade-row {
     display: flex;
     flex-direction: column;
@@ -418,7 +411,7 @@ body {
     line-height: 1.5;
 }
 
-/* Secure Gateway Communications Framework */
+/* Contact Gateways layout wrappers */
 .gateway-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
@@ -483,7 +476,7 @@ a.rolodex-node:hover {
     color: rgba(255, 255, 255, 0.2);
 }
 
-/* Inputs and Forms Control Hooks */
+/* User Form Control elements styling rules */
 .gateway-form {
     display: flex;
     flex-direction: column;
@@ -554,23 +547,58 @@ a.rolodex-node:hover {
     color: #06140c;
 }
 
-/* Master Fixed Year Footer View */
+/* Global Sticky Page Floor Footer */
 .master-footer {
     text-align: center;
     color: #688073;
     font-size: 0.85rem;
     padding: 30px 20px;
-    margin-top: auto; 
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    background: rgba(6, 17, 10, 0.4);
+    background: rgba(17, 17, 17, 0.9);
     width: 100%;
+    margin-top: auto;
+    z-index: 10;
+    position: relative;
+    /* Aligns the content area neatly past the left sidebar frame */
+    margin-left: 280px; 
+    width: calc(100% - 280px);
 }
 
-/* Responsive Adaptive Fluid Breakpoints */
+/* Responsive Adaptive Matrix Fluid Breakpoints */
 @media (max-width: 992px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 30px 20px;
+    }
+    .sidebar-header h2 {
+        margin-bottom: 25px;
+        text-align: center;
+        padding-left: 0;
+    }
+    .sidebar-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .nav-item {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+        border-radius: 12px;
+    }
     .main-content {
-        margin-top: 20px;
-        padding: 20px;
+        margin-left: 0;
+        width: 100%;
+        padding: 35px 20px;
+    }
+    .master-footer {
+        margin-left: 0;
+        width: 100%;
     }
     .hero-grid, .gateway-wrapper {
         grid-template-columns: 1fr;
@@ -579,19 +607,8 @@ a.rolodex-node:hover {
         display: flex;
         flex-direction: column-reverse;
     }
-    .hero-display-aside {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-    .inline-nav-scroll {
-        width: 100%;
-        text-align: center;
-    }
-    .inline-navbar-menu {
-        justify-content: center;
-    }
     .hero-details h1 {
         font-size: 2.5rem;
     }
     }
+    
