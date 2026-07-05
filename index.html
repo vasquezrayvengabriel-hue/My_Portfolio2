@@ -4,303 +4,246 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayven Gabriel G. Vasquez | Software Developer Portfolio</title>
+    <!-- Icon Framework -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-    <aside class="sidebar">
-        <div class="sidebar-header">
+    <!-- Fixed Left Sidebar Layout Shell (389.jpg) -->
+    <aside class="portfolio-sidebar">
+        <div class="sidebar-brand">
             <h2>Portfolio</h2>
         </div>
-        <ul class="sidebar-menu">
-            <li><a href="#home" class="nav-item active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#about" class="nav-item"><i class="fas fa-user"></i> About Me</a></li>
-            <li><a href="#skills" class="nav-item"><i class="fas fa-code"></i> Skills</a></li>
-            <li><a href="#experience" class="nav-item"><i class="fas fa-laptop-code"></i> Experience</a></li>
-            <li><a href="#projects" class="nav-item"><i class="fas fa-folder"></i> Projects</a></li>
-            <li><a href="#education" class="nav-item"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="#achievements" class="nav-item"><i class="fas fa-certificate"></i> Achievements</a></li>
-            <li><a href="#contact" class="nav-item"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-        <div class="sidebar-footer">
+        
+        <nav class="sidebar-navigation">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link-item active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link-item"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#education" class="nav-link-item"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#skills" class="nav-link-item"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link-item"><i class="fas fa-folder"></i> Projects</a></li>
+                <li><a href="#certificates" class="nav-link-item"><i class="fas fa-certificate"></i> Certificates</a></li>
+                <li><a href="#contact" class="nav-link-item"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer-tag">
             <p>© 2026 RGV // DEV</p>
         </div>
     </aside>
 
-    <main class="main-content">
+    <!-- Main Content Container with Balanced Spacing -->
+    <main class="portfolio-main-stream">
+        <div class="balanced-content-wrapper">
 
-        <section id="home" class="content-section">
-            <div class="glass-card hero-grid">
-                <div class="hero-details">
+            <!-- [1] HOME HERO SECTION (Centered layout positions from 389.jpg) -->
+            <section id="home" class="home-hero-view">
+                <div class="hero-media-wrapper">
+                    <div class="profile-avatar-frame">
+                        <img src="profile.jpg" alt="Rayven Gabriel G. Vasquez Profile">
+                    </div>
+                </div>
+
+                <div class="hero-copy-wrapper">
                     <div class="badge-row">
-                        <span class="status-tag live">BSIT Student // 1st Year</span>
-                        <span class="status-tag age">Age: 19</span>
+                        <span class="status-badge">BSIT Student // 1st Year</span>
+                        <span class="status-badge">Age: 19</span>
                     </div>
-                    <h1>Rayven Gabriel<br><span class="accent-text">G. Vasquez</span></h1>
-                    <h2 class="target-objective"><i class="fas fa-code-branch"></i> Aspiring Software Developer</h2>
-                    
-                    <div class="motto-box">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p class="motto-text">"Merging continuous theoretical academic knowledge with active application engineering metrics to maintain structured scalability."</p>
-                    </div>
-
+                    <span class="greeting-text">Hello, I'm</span>
+                    <h1 class="identity-title">Rayven Gabriel G. Vasquez</h1>
+                    <p class="role-subtitle">Aspiring Software Developer</p>
+                    <p class="mission-statement">"Merging continuous theoretical academic knowledge with active application engineering metrics to maintain structured scalability."</p>
                     <a href="#contact" class="action-btn"><i class="fas fa-network-wired"></i> Establish Connection</a>
                 </div>
-                <div class="hero-display">
-                    <div class="avatar-circle">
-                        <img src="profile.jpg" alt="Rayven Gabriel G. Vasquez Profile Picture">
+            </section>
+
+            <!-- [2] ABOUT SECTION -->
+            <section id="about" class="content-section">
+                <div class="glass-card">
+                    <h3 class="panel-title"><i class="fas fa-terminal"></i> About Me</h3>
+                    <div class="bio-narrative">
+                        <p>I am a highly motivated, detail-driven 19-year-old undergraduate student pursuing a Bachelor of Science in Information Technology. My long-term roadmap focuses on complex systematic analytics, software compilation frameworks, and robust computational ecosystems.</p>
+                        <p>My foundational roadmap is entirely dedicated to transitioning technical metrics into production-ready software solutions, aiming to solve modern algorithmic problems natively.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="about" class="content-section">
-            <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-terminal"></i> About Me</h3>
-                <div class="bio-narrative">
-                    <p>I am a highly motivated, detail-driven 19-year-old undergraduate student pursuing a Bachelor of Science in Information Technology. My long-term roadmap focuses on complex systematic analytics, software compilation frameworks, and robust computational ecosystems.</p>
-                    <p>My foundational roadmap is entirely dedicated to transitioning technical metrics into production-ready software solutions, aiming to solve modern algorithmic problems natively.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="content-section">
-            <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-cubes"></i> Technical Skills</h3>
-                <div class="matrix-grid">
-                    <div class="matrix-cell">
-                        <img src="programming.jpg" alt="Programming Engineering Core Stack" class="cell-media">
-                        <h4>Core Stack</h4>
-                        <ul>
-                            <li>HTML5 &amp; CSS3</li>
-                            <li>Java SE Logical Design</li>
-                            <li>Basic JavaScript Systems</li>
-                        </ul>
-                    </div>
-                    <div class="matrix-cell">
-                        <img src="office.jpg" alt="Microsoft Corporate Tool Suite" class="cell-media">
-                        <h4>Productivity Tools</h4>
-                        <ul>
-                            <li>Microsoft Word Engineering</li>
-                            <li>Advanced Excel Layouts</li>
-                            <li>Structured PowerPoint Displays</li>
-                        </ul>
-                    </div>
-                    <div class="matrix-cell">
-                        <img src="problem.jpg" alt="Analytical Logical Reasoning Matrix" class="cell-media">
-                        <h4>Cognitive Logic</h4>
-                        <ul>
-                            <li>Critical System Analysis</li>
-                            <li>Hardware Diagnostics</li>
-                            <li>Structured Logical Debugging</li>
-                        </ul>
-                    </div>
-                    <div class="matrix-cell">
-                        <img src="teamwork.jpg" alt="Operational Group Coordination Mechanics" class="cell-media">
-                        <h4>Collaboration</h4>
-                        <ul>
-                            <li>Synchronous Teamwork</li>
-                            <li>Structural Communication</li>
-                            <li>System Milestone Management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="content-section">
-            <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-laptop-code"></i> Experience</h3>
-                <div class="timeline-stream">
-                    <div class="timeline-block">
-                        <h4>Foundational SDLC Lifecycle</h4>
-                        <span class="time-stamp">Academic Focus</span>
-                        <p>Constructing software solutions through structured logical paradigms, evaluating memory handling models and core OOP design.</p>
-                    </div>
-                    <div class="timeline-block">
-                        <h4>Responsive Interface Ecosystems</h4>
-                        <span class="time-stamp">Technical Execution</span>
-                        <p>Evaluating layout mechanics and UI viewport configurations to support cross-platform structural standards.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="content-section">
-            <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-globe"></i> Featured Projects</h3>
-                <div class="matrix-grid">
-                    <div class="matrix-cell">
-                        <img src="webproject1.jpg" alt="Personal Portfolio Deployment View" class="cell-media">
-                        <h4>Developer Portfolio Workspace</h4>
-                        <ul>
-                            <li>Responsive Glassmorphic UI</li>
-                            <li>Pure CSS Sidebar Synchronization</li>
-                            <li>Strict Semantic HTML Setup</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="content-section">
-            <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Education History</h3>
-                <div class="milestone-deck">
-                    <div class="milestone-unit">
-                        <div class="unit-banner"><img src="elementary.jpg" alt="Mangagoy Elementary School"></div>
-                        <div class="unit-details">
-                            <span class="unit-year">2012 - 2018</span>
-                            <h5>Elementary Education</h5>
-                            <p>Mangagoy Elementary School</p>
-                        </div>
-                    </div>
-                    <div class="milestone-unit">
-                        <div class="unit-banner"><img src="junior.jpg" alt="De La Salle John Bosco College Junior High"></div>
-                        <div class="unit-details">
-                            <span class="unit-year">2018 - 2023</span>
-                            <h5>Junior High School</h5>
-                            <p>De La Salle John Bosco College</p>
-                        </div>
-                    </div>
-                    <div class="milestone-unit">
-                        <div class="unit-banner"><img src="senior.jpg" alt="De La Salle John Bosco College Senior High"></div>
-                        <div class="unit-details">
-                            <span class="unit-year">2023 - 2025</span>
-                            <h5>Senior High School</h5>
-                            <p>De La Salle John Bosco College</p>
-                        </div>
-                    </div>
-                    <div class="milestone-unit">
-                        <div class="unit-banner"><img src="college.jpg" alt="De La Salle John Bosco College Department of IT"></div>
-                        <div class="unit-details">
-                            <span class="unit-year">2025 - Present</span>
-                            <h5>BS Information Technology</h5>
-                            <p>De La Salle John Bosco College</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="achievements" class="content-section">
-            <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-trophy"></i> Key Achievements</h3>
-                <div class="accolade-row">
-                    <div class="accolade-card">
-                        <div class="accolade-badge"><i class="fas fa-award"></i></div>
-                        <div class="accolade-txt">
-                            <h5>Dean's List Academic Commendation Track</h5>
-                            <p>Maintained elite structural metrics and exceptional performance evaluations inside foundational computing modules and data logic systems.</p>
-                        </div>
-                    </div>
-                    <div class="accolade-card">
-                        <div class="accolade-badge"><i class="fas fa-laptop-code"></i></div>
-                        <div class="accolade-txt">
-                            <h5>Algorithmic Optimization &amp; Logic Distinction</h5>
-                            <p>Commended for engineering highly optimized, low-latency computational blueprints during internal competitive programming trials.</p>
-                        </div>
-                    </div>
-                    <div class="accolade-card">
-                        <div class="accolade-badge"><i class="fas fa-cubes"></i></div>
-                        <div class="accolade-txt">
-                            <h5>Responsive Component Architecture Milestone</h5>
-                            <p>Successfully designed and deployed a modular, dashboard-first glassmorphic workspace layout recognized for stable multi-platform breakpoints.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="content-section">
-            <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-envelope-open-text"></i> Get In Touch</h3>
-                <div class="gateway-wrapper">
-                    <div class="rolodex-links">
-                        <a href="mailto:vasquezrayvengabriel@gmail.com" class="rolodex-node">
-                            <div class="node-icon mail"><i class="fas fa-envelope"></i></div>
-                            <div class="node-meta">
-                                <h6>Corporate Mail Node</h6>
-                                <span>vasquezrayvengabriel@gmail.com</span>
-                            </div>
-                            <i class="fas fa-chevron-right link-arrow"></i>
-                        </a>
-                        <div class="rolodex-node">
-                            <div class="node-icon phone"><i class="fas fa-phone-alt"></i></div>
-                            <div class="node-meta">
-                                <h6>Telephonic Channel</h6>
-                                <span>09123241441</span>
+            <!-- [3] EDUCATION SECTION -->
+            <section id="education" class="content-section">
+                <div class="glass-card">
+                    <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Education History</h3>
+                    <div class="milestone-deck">
+                        <div class="milestone-unit">
+                            <div class="unit-banner"><img src="elementary.jpg" alt="Elementary"></div>
+                            <div class="unit-details">
+                                <span class="unit-year">2012 - 2018</span>
+                                <h5>Elementary Education</h5>
+                                <p>Mangagoy Elementary School</p>
                             </div>
                         </div>
-                        <a href="https://facebook.com/RayvenGabrielVasquez" target="_blank" class="rolodex-node">
-                            <div class="node-icon facebook"><i class="fab fa-facebook-f"></i></div>
-                            <div class="node-meta">
-                                <h6>Social Network Portal</h6>
-                                <span>Rayven Gabriel Vasquez</span>
+                        <div class="milestone-unit">
+                            <div class="unit-banner"><img src="junior.jpg" alt="Junior High"></div>
+                            <div class="unit-details">
+                                <span class="unit-year">2018 - 2023</span>
+                                <h5>Junior High School</h5>
+                                <p>De La Salle John Bosco College</p>
                             </div>
-                            <i class="fas fa-chevron-right link-arrow"></i>
-                        </a>
-                        <a href="https://instagram.com/RayvenGabrielVasquez" target="_blank" class="rolodex-node">
-                            <div class="node-icon instagram"><i class="fab fa-instagram"></i></div>
-                            <div class="node-meta">
-                                <h6>Visual Ledger Handle</h6>
-                                <span>@RayvenGabrielVasquez</span>
+                        </div>
+                        <div class="milestone-unit">
+                            <div class="unit-banner"><img src="senior.jpg" alt="Senior High"></div>
+                            <div class="unit-details">
+                                <span class="unit-year">2023 - 2025</span>
+                                <h5>Senior High School</h5>
+                                <p>De La Salle John Bosco College</p>
                             </div>
-                            <i class="fas fa-chevron-right link-arrow"></i>
-                        </a>
+                        </div>
+                        <div class="milestone-unit">
+                            <div class="unit-banner"><img src="college.jpg" alt="College IT"></div>
+                            <div class="unit-details">
+                                <span class="unit-year">2025 - Present</span>
+                                <h5>BS Information Technology</h5>
+                                <p>De La Salle John Bosco College</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <form class="gateway-form" action="mailto:vasquezrayvengabriel@gmail.com" method="post" enctype="text/plain">
-                        <div class="input-container">
-                            <input type="text" name="name" class="control-input" required placeholder=" ">
-                            <label class="floating-label">Sender Full Name</label>
-                        </div>
-                        <div class="input-container">
-                            <input type="email" name="email" class="control-input" required placeholder=" ">
-                            <label class="floating-label">Your Email Endpoint</label>
-                        </div>
-                        <div class="input-container">
-                            <textarea name="message" class="control-input textarea-input" required placeholder=" "></textarea>
-                            <label class="floating-label">Your message parameters...</label>
-                        </div>
-                        <button type="submit" class="transmission-btn">Execute Transmission <i class="fas fa-paper-plane"></i></button>
-                    </form>
                 </div>
-            </div>
-        </section>
+            </section>
 
+            <!-- [4] SKILLS SECTION -->
+            <section id="skills" class="content-section">
+                <div class="glass-card">
+                    <h3 class="panel-title"><i class="fas fa-cubes"></i> Technical Skills</h3>
+                    <div class="matrix-grid">
+                        <div class="matrix-cell">
+                            <img src="programming.jpg" alt="Programming Stack" class="cell-media">
+                            <h4>Core Stack</h4>
+                            <ul>
+                                <li>HTML5 &amp; CSS3</li>
+                                <li>Java SE Logical Design</li>
+                                <li>Basic JavaScript Systems</li>
+                            </ul>
+                        </div>
+                        <div class="matrix-cell">
+                            <img src="office.jpg" alt="Productivity Tools" class="cell-media">
+                            <h4>Productivity Tools</h4>
+                            <ul>
+                                <li>Microsoft Word Engineering</li>
+                                <li>Advanced Excel Layouts</li>
+                                <li>Structured PowerPoint Displays</li>
+                            </ul>
+                        </div>
+                        <div class="matrix-cell">
+                            <img src="problem.jpg" alt="Cognitive Logic" class="cell-media">
+                            <h4>Cognitive Logic</h4>
+                            <ul>
+                                <li>Critical System Analysis</li>
+                                <li>Hardware Diagnostics</li>
+                                <li>Structured Logical Debugging</li>
+                            </ul>
+                        </div>
+                        <div class="matrix-cell">
+                            <img src="teamwork.jpg" alt="Collaboration" class="cell-media">
+                            <h4>Collaboration</h4>
+                            <ul>
+                                <li>Synchronous Teamwork</li>
+                                <li>Structural Communication</li>
+                                <li>System Milestone Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- [5] PROJECTS SECTION -->
+            <section id="projects" class="content-section">
+                <div class="glass-card">
+                    <h3 class="panel-title"><i class="fas fa-globe"></i> Featured Projects</h3>
+                    <div class="matrix-grid">
+                        <div class="matrix-cell">
+                            <img src="webproject1.jpg" alt="Portfolio Workspace" class="cell-media">
+                            <h4>Developer Portfolio Workspace</h4>
+                            <ul>
+                                <li>Responsive Glassmorphic UI</li>
+                                <li>Pure CSS Sidebar Synchronization</li>
+                                <li>Strict Semantic HTML Setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- [6] CERTIFICATES SECTION -->
+            <section id="certificates" class="content-section">
+                <div class="glass-card">
+                    <h3 class="panel-title"><i class="fas fa-trophy"></i> Key Achievements &amp; Certificates</h3>
+                    <div class="accolade-row">
+                        <div class="accolade-card">
+                            <div class="accolade-badge"><i class="fas fa-award"></i></div>
+                            <div class="accolade-txt">
+                                <h5>Dean's List Academic Commendation Track</h5>
+                                <p>Maintained elite structural metrics and exceptional performance evaluations inside foundational computing modules and data logic systems.</p>
+                            </div>
+                        </div>
+                        <div class="accolade-card">
+                            <div class="accolade-badge"><i class="fas fa-laptop-code"></i></div>
+                            <div class="accolade-txt">
+                                <h5>Algorithmic Optimization &amp; Logic Distinction</h5>
+                                <p>Commended for engineering highly optimized, low-latency computational blueprints during internal competitive programming trials.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- [7] CONTACT SECTION -->
+            <section id="contact" class="content-section">
+                <div class="glass-card">
+                    <h3 class="panel-title"><i class="fas fa-envelope-open-text"></i> Get In Touch</h3>
+                    <div class="gateway-wrapper">
+                        <div class="rolodex-links">
+                            <a href="mailto:vasquezrayvengabriel@gmail.com" class="rolodex-node">
+                                <div class="node-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="node-meta">
+                                    <h6>Corporate Mail Node</h6>
+                                    <span>vasquezrayvengabriel@gmail.com</span>
+                                </div>
+                            </a>
+                            <div class="rolodex-node">
+                                <div class="node-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="node-meta">
+                                    <h6>Telephonic Channel</h6>
+                                    <span>09123241441</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="gateway-form" action="mailto:vasquezrayvengabriel@gmail.com" method="post" enctype="text/plain">
+                            <div class="input-container">
+                                <input type="text" name="name" class="control-input" required placeholder=" ">
+                                <label class="floating-label">Sender Full Name</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="email" name="email" class="control-input" required placeholder=" ">
+                                <label class="floating-label">Your Email Endpoint</label>
+                            </div>
+                            <div class="input-container">
+                                <textarea name="message" class="control-input textarea-input" required placeholder=" "></textarea>
+                                <label class="floating-label">Your message parameters...</label>
+                            </div>
+                            <button type="submit" class="transmission-btn">Execute Transmission <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page Footer Panel Embedded Inside Balanced Wrapper -->
+            <footer class="master-footer">
+                <p>© 2026 Rayven Gabriel G. Vasquez. All Rights Reserved.</p>
+            </footer>
+
+        </div>
     </main>
 
-    <footer class="master-footer">
-        <p>© 2026 Rayven Gabriel G. Vasquez. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const navLinks = document.querySelectorAll('.sidebar-menu a');
-            const sections = document.querySelectorAll('.content-section');
-
-            function trackScroll() {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100;
-                    if (window.pageYOffset >= sectionTop) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', trackScroll);
-        });
-    </script>
 </body>
-                                            </html>
-    
+                                    </html>
+                                    
