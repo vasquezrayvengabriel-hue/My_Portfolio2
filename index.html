@@ -15,11 +15,12 @@
         </div>
         <ul class="sidebar-menu">
             <li><a href="#home" class="nav-item active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#about" class="nav-item"><i class="fas fa-user-astronaut"></i> Profile</a></li>
-            <li><a href="#skills" class="nav-item"><i class="fas fa-layer-group"></i> Matrix</a></li>
-            <li><a href="#education" class="nav-item"><i class="fas fa-graduation-cap"></i> Milestones</a></li>
-            <li><a href="#achievements" class="nav-item"><i class="fas fa-trophy"></i> Accolades</a></li>
-            <li><a href="#contact" class="nav-item"><i class="fas fa-satellite-dish"></i> Gateway</a></li>
+            <li><a href="#about" class="nav-item"><i class="fas fa-user-astronaut"></i> About Me</a></li>
+            <li><a href="#experience" class="nav-item"><i class="fas fa-laptop-code"></i> Experience</a></li>
+            <li><a href="#skills" class="nav-item"><i class="fas fa-layer-group"></i> Skills</a></li>
+            <li><a href="#education" class="nav-item"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#achievements" class="nav-item"><i class="fas fa-trophy"></i> Achievement</a></li>
+            <li><a href="#contact" class="nav-item"><i class="fas fa-satellite-dish"></i> Contact Me</a></li>
         </ul>
         <div class="sidebar-footer">
             <p>© 2026 RGV // DEV</p>
@@ -53,39 +54,37 @@
             </div>
         </section>
 
-        <div class="dual-grid">
-            <section id="about" class="content-section">
-                <div class="glass-card full-height">
-                    <h3 class="panel-title"><i class="fas fa-terminal"></i> Core Identity Layout</h3>
-                    <div class="bio-narrative">
-                        <p>I am a highly motivated, detail-driven 19-year-old undergraduate student pursuing a Bachelor of Science in Information Technology. My long-term roadmap focuses on complex systematic analytics, software compilation frameworks, and robust computational ecosystems.</p>
-                        <p>My foundational roadmap is entirely dedicated to transitioning technical metrics into production-ready software solutions, aiming to solve modern algorithmic problems natively.</p>
-                    </div>
+        <section id="about" class="content-section">
+            <div class="glass-card">
+                <h3 class="panel-title"><i class="fas fa-terminal"></i> About Me</h3>
+                <div class="bio-narrative">
+                    <p>I am a highly motivated, detail-driven 19-year-old undergraduate student pursuing a Bachelor of Science in Information Technology. My long-term roadmap focuses on complex systematic analytics, software compilation frameworks, and robust computational ecosystems.</p>
+                    <p>My foundational roadmap is entirely dedicated to transitioning technical metrics into production-ready software solutions, aiming to solve modern algorithmic problems natively.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="experience" class="content-section">
-                <div class="glass-card full-height">
-                    <h3 class="panel-title"><i class="fas fa-laptop-code"></i> Engineering Focus</h3>
-                    <div class="timeline-stream">
-                        <div class="timeline-block">
-                            <h4>Foundational SDLC Lifecycle</h4>
-                            <span class="time-stamp">Academic Focus</span>
-                            <p>Constructing software solutions through structured logical paradigms, evaluating memory handling models and core OOP design.</p>
-                        </div>
-                        <div class="timeline-block">
-                            <h4>Responsive Interface Ecosystems</h4>
-                            <span class="time-stamp">Technical Execution</span>
-                            <p>Evaluating layout mechanics and UI viewport configurations to support cross-platform structural standards.</p>
-                        </div>
+        <section id="experience" class="content-section">
+            <div class="glass-card">
+                <h3 class="panel-title"><i class="fas fa-laptop-code"></i> Experience</h3>
+                <div class="timeline-stream">
+                    <div class="timeline-block">
+                        <h4>Foundational SDLC Lifecycle</h4>
+                        <span class="time-stamp">Academic Focus</span>
+                        <p>Constructing software solutions through structured logical paradigms, evaluating memory handling models and core OOP design.</p>
+                    </div>
+                    <div class="timeline-block">
+                        <h4>Responsive Interface Ecosystems</h4>
+                        <span class="time-stamp">Technical Execution</span>
+                        <p>Evaluating layout mechanics and UI viewport configurations to support cross-platform structural standards.</p>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
         <section id="skills" class="content-section">
             <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-cubes"></i> Technical Competency Matrix</h3>
+                <h3 class="panel-title"><i class="fas fa-cubes"></i> Skills</h3>
                 <div class="matrix-grid">
                     <div class="matrix-cell">
                         <img src="programming.jpg" alt="Programming Engineering Core Stack" class="cell-media">
@@ -129,7 +128,7 @@
 
         <section id="education" class="content-section">
             <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Educational Milestones</h3>
+                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Education</h3>
                 <div class="milestone-deck">
                     <div class="milestone-unit">
                         <div class="unit-banner"><img src="elementary.jpg" alt="Mangagoy Elementary School"></div>
@@ -169,7 +168,7 @@
 
         <section id="achievements" class="content-section">
             <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-trophy"></i> Technical Accolades &amp; Distinctions</h3>
+                <h3 class="panel-title"><i class="fas fa-trophy"></i> Achievement</h3>
                 <div class="accolade-row">
                     
                     <div class="accolade-card">
@@ -202,7 +201,7 @@
 
         <section id="contact" class="content-section">
             <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-envelope-open-text"></i> Secure Communications Layer</h3>
+                <h3 class="panel-title"><i class="fas fa-envelope-open-text"></i> Contact Me</h3>
                 <div class="gateway-wrapper">
                     
                     <div class="rolodex-links">
@@ -273,7 +272,7 @@
             function trackScroll() {
                 let current = '';
                 sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100;
+                    const sectionTop = section.offsetTop - 120;
                     if (window.pageYOffset >= sectionTop) {
                         current = section.getAttribute('id');
                     }
@@ -291,5 +290,5 @@
         });
     </script>
 </body>
-    </html>
-    
+                                                                                             </html>
+                                                                                             
