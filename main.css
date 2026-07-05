@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
 }
 
-/* Base Configuration & Fixed Background implementation */
+/* Base Configuration & Fixed Background Implementation */
 body {
     background: linear-gradient(135deg, rgba(8, 22, 13, 0.94), rgba(15, 30, 20, 0.97)), url('background.jpg');
     background-size: cover;
@@ -16,17 +16,17 @@ body {
     color: #e2f1ea;
     min-height: 100vh;
     display: flex;
-    flex-direction: row; /* Horizontal structural split */
+    flex-direction: row; /* Horizontal layout split */
 }
 
-/* Vertical Sidebar Layout on the Left Wall */
+/* Vertical Sidebar Layout on the Left Side */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 280px;
     height: 100vh;
-    background: #0a140e; /* Deep dark background matching the green theme layout */
+    background: #0a140e; /* Matte emerald charcoal black */
     border-right: 1px solid rgba(74, 222, 128, 0.08);
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ body {
     z-index: 100;
 }
 
-/* Title styled exactly like 'Portfolio' header in image 388.jpg */
+/* Header styled exactly like 'Portfolio' title from image 388.jpg */
 .sidebar-header h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -44,24 +44,24 @@ body {
     padding-left: 12px;
 }
 
-/* Sidebar structure orientation */
+/* Sidebar lists orientation */
 .sidebar-menu {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     width: 100%;
 }
 
-/* Item layouts replicating image 388.jpg style cards */
+/* Menu items pill layout rounding matching style card */
 .nav-item {
     display: flex;
     align-items: center;
     gap: 18px;
     color: #a3b8ad; /* Soft silver-green text styling */
     text-decoration: none;
-    padding: 15px 20px;
-    border-radius: 16px; /* High rounding pill structures */
+    padding: 14px 20px;
+    border-radius: 16px; 
     font-size: 1.05rem;
     font-weight: 500;
     transition: all 0.25s ease;
@@ -79,10 +79,10 @@ body {
     background: rgba(74, 222, 128, 0.05);
 }
 
-/* Green Active State Capsule (#4ade80) matching your site theme */
+/* Green Active State Capsule (#4ade80) */
 .nav-item.active {
     color: #06140c;
-    background: #4ade80; /* Theme Accent Green */
+    background: #4ade80; 
     font-weight: 600;
     box-shadow: 0 4px 20px rgba(74, 222, 128, 0.25);
 }
@@ -98,7 +98,7 @@ body {
     padding-left: 12px;
 }
 
-/* Offset Layout to align profile to the right side of the navigation */
+/* Content Area offset layout to grant room to the left sidebar panel */
 .main-content {
     margin-left: 280px; 
     flex: 1;
@@ -106,7 +106,7 @@ body {
     padding: 50px 5% 60px 5%;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 50px; /* Uniform section gap */
 }
 
 .content-section {
@@ -192,7 +192,6 @@ body {
     padding: 18px 22px;
     border-radius: 0 12px 12px 0;
     margin-bottom: 35px;
-    position: relative;
 }
 
 .motto-text {
@@ -288,7 +287,7 @@ body {
     color: #a3b8ad;
 }
 
-/* Technical Matrix Component Grids */
+/* Technical Matrix Grid Components */
 .matrix-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -327,7 +326,7 @@ body {
     color: #4ade80;
 }
 
-/* Milestone Container Blocks */
+/* Milestone Container Decks */
 .milestone-deck {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -370,7 +369,7 @@ body {
     color: #a3b8ad;
 }
 
-/* Accolade Rows layout properties */
+/* Accolades List Elements */
 .accolade-row {
     display: flex;
     flex-direction: column;
@@ -411,7 +410,7 @@ body {
     line-height: 1.5;
 }
 
-/* Contact Gateways layout wrappers */
+/* Contacts Layout Frameworks */
 .gateway-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
@@ -476,7 +475,7 @@ a.rolodex-node:hover {
     color: rgba(255, 255, 255, 0.2);
 }
 
-/* User Form Control elements styling rules */
+/* Input Fields Styles */
 .gateway-form {
     display: flex;
     flex-direction: column;
@@ -547,7 +546,7 @@ a.rolodex-node:hover {
     color: #06140c;
 }
 
-/* Master Grid Alignments past the fixed sidebar bounds */
+/* Master Footer Alignment Outside Sidebar Bounds */
 .master-footer {
     text-align: center;
     color: #688073;
@@ -562,7 +561,7 @@ a.rolodex-node:hover {
     margin-top: auto;
 }
 
-/* Responsive Fluid Viewport Adapters */
+/* Fluid Responsive Breakpoints */
 @media (max-width: 992px) {
     body {
         flex-direction: column;
@@ -608,4 +607,5 @@ a.rolodex-node:hover {
     .hero-details h1 {
         font-size: 2.5rem;
     }
-                     }
+    }
+    
