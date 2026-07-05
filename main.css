@@ -64,7 +64,7 @@ footer{
     padding:25px;
 }
 
-/* Responsive Styles */
+/* Responsive Layout Breakpoints */
 
 @media(max-width:900px){
 
@@ -100,9 +100,9 @@ section{
 
 }
 
-/* ==========================
+/* =========================================
    Contact Form Styles
-========================== */
+========================================= */
 
 .contact-form {
     display: flex;
@@ -120,7 +120,7 @@ section{
 
 .form-group label {
     font-weight: bold;
-    color: #9cff8f; /* Matches glowing header text */
+    color: #9cff8f; /* Matches your light green heading style */
 }
 
 .form-control {
@@ -131,7 +131,7 @@ section{
     font-size: 16px;
     outline: none;
     transition: .3s;
-    background: rgba(255, 255, 255, 0.1); /* Matches card style transparency */
+    background: rgba(255, 255, 255, 0.1); /* Matches card transparency */
     color: #fff;
 }
 
@@ -150,7 +150,7 @@ textarea.form-control {
 }
 
 .btn-submit {
-    background: #2e7d32; /* Rich green button matching skill tags */
+    background: #2e7d32; /* Matches rich green skill box elements */
     color: #fff;
     padding: 14px 28px;
     border: none;
@@ -164,6 +164,7 @@ textarea.form-control {
 
 .btn-submit:hover {
     background: #43a047;
-    transform: translateY(-4px); /* Upward lift animation on hover */
+    transform: translateY(-4px); /* Upward lift card hover effect mimic */
     box-shadow: 0 5px 15px rgba(156, 255, 143, 0.2);
 }
+
