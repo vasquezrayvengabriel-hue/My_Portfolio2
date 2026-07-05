@@ -9,26 +9,28 @@
 </head>
 <body>
 
-    <aside class="sidebar">
-        <div class="sidebar-brand">
-            <span class="brand-logo">//</span> RGV // TECH
+    <!-- Sticky Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="navbar-brand">
+                <span class="brand-logo">//</span> RGV // TECH
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#home" class="nav-item active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-item"><i class="fas fa-user-astronaut"></i> About</a></li>
+                <li><a href="#experience" class="nav-item"><i class="fas fa-laptop-code"></i> Experience</a></li>
+                <li><a href="#skills" class="nav-item"><i class="fas fa-layer-group"></i> Skills</a></li>
+                <li><a href="#education" class="nav-item"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#achievements" class="nav-item"><i class="fas fa-trophy"></i> Achievements</a></li>
+                <li><a href="#contact" class="nav-item"><i class="fas fa-satellite-dish"></i> Contact</a></li>
+            </ul>
         </div>
-        <ul class="sidebar-menu">
-            <li><a href="#home" class="nav-item active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#about" class="nav-item"><i class="fas fa-user-astronaut"></i> About Me</a></li>
-            <li><a href="#experience" class="nav-item"><i class="fas fa-laptop-code"></i> Experience</a></li>
-            <li><a href="#skills" class="nav-item"><i class="fas fa-layer-group"></i> Skills</a></li>
-            <li><a href="#education" class="nav-item"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="#achievements" class="nav-item"><i class="fas fa-trophy"></i> Achievement</a></li>
-            <li><a href="#contact" class="nav-item"><i class="fas fa-satellite-dish"></i> Contact Me</a></li>
-        </ul>
-        <div class="sidebar-footer">
-            <p>© 2026 RGV // DEV</p>
-        </div>
-    </aside>
+    </nav>
 
+    <!-- Main Content Stream -->
     <main class="main-content">
 
+        <!-- Home Section -->
         <section id="home" class="content-section">
             <div class="glass-card hero-grid">
                 <div class="hero-details">
@@ -47,13 +49,14 @@
                     <a href="#contact" class="action-btn"><i class="fas fa-network-wired"></i> Establish Connection</a>
                 </div>
                 <div class="hero-display">
-                    <div class="avatar-hexagon">
+                    <div class="avatar-circle">
                         <img src="profile.jpg" alt="Rayven Gabriel G. Vasquez Profile Picture">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- About Me Section -->
         <section id="about" class="content-section">
             <div class="glass-card">
                 <h3 class="panel-title"><i class="fas fa-terminal"></i> About Me</h3>
@@ -64,6 +67,7 @@
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="content-section">
             <div class="glass-card">
                 <h3 class="panel-title"><i class="fas fa-laptop-code"></i> Experience</h3>
@@ -82,6 +86,7 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="content-section">
             <div class="glass-card">
                 <h3 class="panel-title"><i class="fas fa-cubes"></i> Skills</h3>
@@ -126,6 +131,7 @@
             </div>
         </section>
 
+        <!-- Education Section -->
         <section id="education" class="content-section">
             <div class="glass-card">
                 <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Education</h3>
@@ -166,11 +172,11 @@
             </div>
         </section>
 
+        <!-- Achievement Section -->
         <section id="achievements" class="content-section">
             <div class="glass-card">
-                <h3 class="panel-title"><i class="fas fa-trophy"></i> Achievement</h3>
+                <h3 class="panel-title"><i class="fas fa-trophy"></i> Achievements</h3>
                 <div class="accolade-row">
-                    
                     <div class="accolade-card">
                         <div class="accolade-badge"><i class="fas fa-award"></i></div>
                         <div class="accolade-txt">
@@ -178,7 +184,6 @@
                             <p>Maintained elite structural metrics and exceptional performance evaluations inside foundational computing modules and data logic systems.</p>
                         </div>
                     </div>
-                    
                     <div class="accolade-card">
                         <div class="accolade-badge"><i class="fas fa-laptop-code"></i></div>
                         <div class="accolade-txt">
@@ -186,7 +191,6 @@
                             <p>Commended for engineering highly optimized, low-latency computational blueprints during internal competitive programming mock trials and structured logical array sprint sets.</p>
                         </div>
                     </div>
-
                     <div class="accolade-card">
                         <div class="accolade-badge"><i class="fas fa-cubes"></i></div>
                         <div class="accolade-txt">
@@ -194,16 +198,15 @@
                             <p>Successfully designed and deployed a modular, dashboard-first glassmorphic workspace layout recognized for maintaining stable viewports across fluctuating mobile breakpoints.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
+        <!-- Contact Me Section -->
         <section id="contact" class="content-section">
             <div class="glass-card">
                 <h3 class="panel-title"><i class="fas fa-envelope-open-text"></i> Contact Me</h3>
                 <div class="gateway-wrapper">
-                    
                     <div class="rolodex-links">
                         <a href="mailto:vasquezrayvengabriel@gmail.com" class="rolodex-node">
                             <div class="node-icon mail"><i class="fas fa-envelope"></i></div>
@@ -253,26 +256,49 @@
                         </div>
                         <button type="submit" class="transmission-btn">Execute Transmission <i class="fas fa-paper-plane"></i></button>
                     </form>
-
                 </div>
             </div>
         </section>
 
-        <footer class="system-footer">
-            <p>System compiled and served natively. Environment configuration locked.</p>
-        </footer>
-
     </main>
 
+    <!-- Standard Multi-Tier Master Footer -->
+    <footer class="master-footer">
+        <div class="footer-container">
+            <div class="footer-branding">
+                <h4>// RGV // TECH</h4>
+                <p>Architecting production-ready code configurations and modular digital frameworks natively.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-systems">
+                <h5>Environment</h5>
+                <p><i class="fas fa-server"></i> Status: Locked &amp; Secure</p>
+                <p><i class="fas fa-code"></i> Language: HTML5 / CSS3 / Java</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2026 Rayven Gabriel G. Vasquez. All Rights Reserved. Environment configuration locked.</p>
+        </div>
+    </footer>
+
+    <!-- Navigation Scroll Engine Tracker -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const navLinks = document.querySelectorAll('.sidebar-menu a');
+            const navLinks = document.querySelectorAll('.navbar-menu a');
             const sections = document.querySelectorAll('.content-section');
 
             function trackScroll() {
                 let current = '';
                 sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 120;
+                    const sectionTop = section.offsetTop - 140;
                     if (window.pageYOffset >= sectionTop) {
                         current = section.getAttribute('id');
                     }
@@ -290,5 +316,5 @@
         });
     </script>
 </body>
-                                                                                             </html>
-                                                                                             
+                        </html>
+                        
