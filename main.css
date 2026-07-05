@@ -16,65 +16,63 @@ body {
     color: #e2f1ea;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
 }
 
-/* Common Portfolio Top Navbar Architecture */
-.navbar {
+/* Strictly Vertical Sidebar Layout (Fixed Left Panel) */
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 80px;
-    background: rgba(10, 24, 15, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 4%;
+    width: 260px;
+    height: 100vh;
+    background: rgba(10, 24, 15, 0.88);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    padding: 40px 20px;
+    z-index: 100;
 }
 
-.navbar-brand {
+.sidebar-brand {
     font-size: 1.25rem;
     font-weight: 800;
     color: #fff;
     letter-spacing: 2px;
+    padding-left: 10px;
 }
 
 .brand-logo {
     color: #4ade80;
 }
 
-.navbar-menu {
+/* Strictly vertical layout */
+.sidebar-menu {
     list-style: none;
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 15px;
     color: #a3b8ad;
     text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-size: 0.9rem;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 0.95rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item i {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
+    width: 20px;
+    transition: transform 0.3s ease;
 }
 
 .nav-item:hover {
@@ -82,29 +80,36 @@ body {
     background: rgba(255, 255, 255, 0.03);
 }
 
+.nav-item:hover i {
+    transform: translateX(4px);
+}
+
 .nav-item.active {
     color: #06140c;
     background: #4ade80;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
+    box-shadow: 0 4px 20px rgba(74, 222, 128, 0.25);
 }
 
-/* Restructured Central Content Container */
+.sidebar-footer {
+    font-size: 0.75rem;
+    color: #688073;
+    padding-left: 10px;
+}
+
+/* Content Area Offsets */
 .main-content {
-    margin-top: 80px;
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 60px 4% 80px 4%;
+    margin-left: 260px;
+    flex: 1;
+    max-width: 1100px;
+    padding: 40px 5% 60px 5%;
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    flex: 1;
+    gap: 40px;
 }
 
 .content-section {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 40px;
 }
 
 /* Semi-Transparent Glassmorphic Content Panels */
@@ -129,7 +134,7 @@ body {
     padding-bottom: 12px;
 }
 
-/* Profile Layout with Circle Modifiers */
+/* Profile Section Layout Rules */
 .hero-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -220,23 +225,20 @@ body {
     justify-content: center;
 }
 
-/* Optimized Circular Profile Picture Architecture */
-.avatar-circle, .avatar-hexagon {
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
+.avatar-hexagon {
+    width: 240px;
+    height: 240px;
+    border-radius: 30px;
+    transform: rotate(45deg);
     overflow: hidden;
-    border: 3px solid rgba(74, 222, 128, 0.4);
-    box-shadow: 0 0 20px rgba(74, 222, 128, 0.15);
-    transform: none;
-    flex-shrink: 0;
+    border: 4px solid rgba(74, 222, 128, 0.3);
 }
 
-.avatar-circle img, .avatar-hexagon img {
-    width: 100%;
-    height: 100%;
+.avatar-hexagon img {
+    width: 140%;
+    height: 140%;
     object-fit: cover;
-    transform: none;
+    transform: rotate(-45deg) translate(-15%, -15%);
 }
 
 .bio-narrative p {
@@ -549,91 +551,35 @@ a.rolodex-node:hover {
     color: #06140c;
 }
 
-/* Premium Master Portfolio Footer Layout */
-.master-footer {
-    width: 100%;
-    background: rgba(8, 18, 12, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 50px 4% 30px 4%;
-    margin-top: auto;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-branding h4 {
-    color: #fff;
-    font-size: 1.15rem;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
-.footer-branding p {
-    color: #a3b8ad;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    max-width: 400px;
-}
-
-.footer-links h5, .footer-systems h5 {
-    color: #4ade80;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer-links ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.footer-links ul li a {
-    color: #a3b8ad;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.2s ease;
-}
-
-.footer-links ul li a:hover {
-    color: #fff;
-}
-
-.footer-systems p {
-    color: #a3b8ad;
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-copyright {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 25px;
+.system-footer {
     text-align: center;
     color: #556c5f;
     font-size: 0.8rem;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 /* Responsive Structural Breakpoints */
 @media (max-width: 992px) {
-    .navbar-menu {
-        display: none;
+    body {
+        flex-direction: column;
     }
-    .hero-grid, .gateway-wrapper, .footer-container {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+    .sidebar-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .hero-grid, .gateway-wrapper {
         grid-template-columns: 1fr;
     }
     .hero-grid {
