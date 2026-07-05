@@ -16,104 +16,24 @@ body {
     color: #e2f1ea;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Changed to column to stack Top Nav and Main Content natively */
+    flex-direction: column;
 }
 
-/* New Sticky Top Navigation Bar Layout */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(10, 24, 15, 0.92);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    z-index: 1000;
-    padding: 15px 40px;
-}
-
-.nav-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Aligns brand and navigation options completely to the left */
-    gap: 50px;
-}
-
-.navbar-brand {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: 2px;
-    white-space: nowrap;
-}
-
-.brand-logo {
-    color: #4ade80;
-}
-
-/* Horizontal top menu layout */
-.navbar-menu {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap; /* Gracefully handles lower browser resolution wrapping safely */
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #a3b8ad;
-    text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    white-space: nowrap;
-}
-
-.nav-item i {
-    font-size: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.nav-item:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.nav-item:hover i {
-    transform: translateY(-2px); /* Swapped arrow hover from sideways to upward bounce */
-}
-
-.nav-item.active {
-    color: #06140c;
-    background: #4ade80;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
-}
-
-/* Content Area Config - Shifted margin offsets to compensate for Top Bar height */
+/* Main Content Layout Block */
 .main-content {
-    margin-top: 80px; /* Pads content downward below sticky menu frame */
+    margin-top: 40px; 
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     max-width: 1200px;
-    padding: 40px 4% 60px 4%;
+    padding: 0 4% 60px 4%;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
 .content-section {
-    scroll-margin-top: 110px; /* Fine-tuned alignment target during anchor click scroll drops */
+    scroll-margin-top: 40px; 
 }
 
 /* Glassmorphic Core Framework Components */
@@ -138,10 +58,10 @@ body {
     padding-bottom: 12px;
 }
 
-/* Profile Interface Element Layouts */
+/* Dual Column Layout Grid configuration inside Hero Card */
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 40px;
     align-items: center;
 }
@@ -224,18 +144,91 @@ body {
     box-shadow: 0 6px 20px rgba(74, 222, 128, 0.3);
 }
 
-.hero-display {
+/* Context block placement mapping menu slider immediately to the LEFT of profile photo */
+.hero-display-aside {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-end; 
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
 }
 
+/* Horizontal slide wrapper rules */
+.inline-nav-scroll {
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 5px;
+    text-align: right; 
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 222, 128, 0.3) transparent;
+}
+
+/* Webkit Scrollbar layout properties */
+.inline-nav-scroll::-webkit-scrollbar {
+    height: 4px;
+}
+.inline-nav-scroll::-webkit-scrollbar-thumb {
+    background: rgba(74, 222, 128, 0.3);
+    border-radius: 10px;
+}
+
+/* Unordered list flex configurations */
+.inline-navbar-menu {
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+/* Inner Navigation Item Buttons */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #a3b8ad;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.nav-item i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.nav-item:hover i {
+    transform: translateY(-2px);
+}
+
+.nav-item.active {
+    color: #06140c;
+    background: #4ade80;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
+}
+
+/* Avatar Circle styling architecture */
 .avatar-circle {
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid rgba(74, 222, 128, 0.3);
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    flex-shrink: 0; 
 }
 
 .avatar-circle img {
@@ -567,7 +560,7 @@ a.rolodex-node:hover {
     color: #688073;
     font-size: 0.85rem;
     padding: 30px 20px;
-    margin-top: auto; /* Ensures footer sticks seamlessly to absolute document bottom floor */
+    margin-top: auto; 
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     background: rgba(6, 17, 10, 0.4);
     width: 100%;
@@ -575,23 +568,8 @@ a.rolodex-node:hover {
 
 /* Responsive Adaptive Fluid Breakpoints */
 @media (max-width: 992px) {
-    .navbar {
-        padding: 15px 20px;
-    }
-    .nav-container {
-        gap: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navbar-menu {
-        gap: 4px;
-    }
-    .nav-item {
-        padding: 8px 10px;
-        font-size: 0.85rem;
-    }
     .main-content {
-        margin-top: 130px; /* Accounts for wrapped vertical stacking of top nav items on mobile */
+        margin-top: 20px;
         padding: 20px;
     }
     .hero-grid, .gateway-wrapper {
@@ -601,8 +579,19 @@ a.rolodex-node:hover {
         display: flex;
         flex-direction: column-reverse;
     }
+    .hero-display-aside {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .inline-nav-scroll {
+        width: 100%;
+        text-align: center;
+    }
+    .inline-navbar-menu {
+        justify-content: center;
+    }
     .hero-details h1 {
         font-size: 2.5rem;
     }
     }
-    
