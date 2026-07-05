@@ -16,17 +16,17 @@ body {
     color: #e2f1ea;
     min-height: 100vh;
     display: flex;
-    flex-direction: row; /* Structural sidebar alignment split */
+    flex-direction: row; /* Horizontal structural split */
 }
 
-/* Vertical Sidebar Layout (Directly Replicated from Uploaded Image Style) */
+/* Vertical Sidebar Layout on the Left Wall */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 280px;
     height: 100vh;
-    background: #0a140e; /*  Very Medium green, deep charcoal green*/
+    background: #0a140e; /* Deep dark background matching the green theme layout */
     border-right: 1px solid rgba(74, 222, 128, 0.08);
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ body {
     z-index: 100;
 }
 
-/* Header styled exactly like 'Portfolio' title in image */
+/* Title styled exactly like 'Portfolio' header in image 388.jpg */
 .sidebar-header h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -44,7 +44,7 @@ body {
     padding-left: 12px;
 }
 
-/* Sidebar lists orientation */
+/* Sidebar structure orientation */
 .sidebar-menu {
     list-style: none;
     display: flex;
@@ -53,7 +53,7 @@ body {
     width: 100%;
 }
 
-/* Menu Text elements configured to match reference image */
+/* Item layouts replicating image 388.jpg style cards */
 .nav-item {
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@ body {
     color: #a3b8ad; /* Soft silver-green text styling */
     text-decoration: none;
     padding: 15px 20px;
-    border-radius: 16px; /* Pill layout rounding matching uploaded display card */
+    border-radius: 16px; /* High rounding pill structures */
     font-size: 1.05rem;
     font-weight: 500;
     transition: all 0.25s ease;
@@ -79,10 +79,10 @@ body {
     background: rgba(74, 222, 128, 0.05);
 }
 
-/* Updated Selection Capsule matching your Green Accent Theme color */
+/* Green Active State Capsule (#4ade80) matching your site theme */
 .nav-item.active {
     color: #06140c;
-    background: #4ade80; /* Clean High-Contrast Green theme color */
+    background: #4ade80; /* Theme Accent Green */
     font-weight: 600;
     box-shadow: 0 4px 20px rgba(74, 222, 128, 0.25);
 }
@@ -98,7 +98,7 @@ body {
     padding-left: 12px;
 }
 
-/* Content Area offset layout to grant clean room to the left side menu panel */
+/* Offset Layout to align profile to the right side of the navigation */
 .main-content {
     margin-left: 280px; 
     flex: 1;
@@ -547,7 +547,7 @@ a.rolodex-node:hover {
     color: #06140c;
 }
 
-/* Global Sticky Page Floor Footer */
+/* Master Grid Alignments past the fixed sidebar bounds */
 .master-footer {
     text-align: center;
     color: #688073;
@@ -557,13 +557,12 @@ a.rolodex-node:hover {
     background: rgba(17, 17, 17, 0.9);
     z-index: 10;
     position: relative;
-    /* Aligns the content area neatly past the left sidebar frame */
     margin-left: 280px; 
     width: calc(100% - 280px);
     margin-top: auto;
 }
 
-/* Responsive Adaptive Matrix Fluid Breakpoints */
+/* Responsive Fluid Viewport Adapters */
 @media (max-width: 992px) {
     body {
         flex-direction: column;
@@ -587,5 +586,26 @@ a.rolodex-node:hover {
     }
     .nav-item {
         padding: 10px 14px;
-        font
-    
+        font-size: 0.9rem;
+        border-radius: 12px;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 35px 20px;
+    }
+    .master-footer {
+        margin-left: 0;
+        width: 100%;
+    }
+    .hero-grid, .gateway-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .hero-grid {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .hero-details h1 {
+        font-size: 2.5rem;
+    }
+                     }
